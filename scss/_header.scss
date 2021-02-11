@@ -1,0 +1,123 @@
+
+header {
+  background: #FFFFFF 0 0 no-repeat padding-box;
+  box-shadow: 0 3px 6px #00000029;
+  opacity: 1;
+
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto 136px;
+    @include mobile {
+      margin: auto 15px;
+    }
+
+    a {
+      text-align: left;
+      font: normal normal 300 32px/37px Raleway;
+      letter-spacing: 0;
+      color: #08A6E4;
+      opacity: 1;
+      padding: 16px 0;
+      text-decoration: none;
+    }
+
+    ul {
+      display: flex;
+      list-style: none;
+
+      @include mobile {
+        position: absolute;
+        left: 0;
+        top: 95px;
+        flex-direction: column;
+        background-color: white;
+        width: 100%;
+        padding-bottom: 20px;
+        display: none;
+      }
+
+      li {
+        height: 15px;
+        text-align: center;
+        font: normal normal bold 11px/15px Open Sans;
+        letter-spacing: 3px;
+        color: #A5A5A5;
+        opacity: 1;
+        padding: 27px;
+        text-transform: uppercase;
+        font-weight: 700;
+        border-bottom: 4px solid transparent;
+        cursor: pointer;
+        @include mobile {
+          display: block;
+          padding: 14px 20px;
+        }
+
+        &:hover {
+          border-bottom: 4px solid #08A6E4;
+          opacity: 1;
+        }
+
+        &:first-child {
+          color: #000000;
+        }
+      }
+    }
+
+    nav {
+      .menu_nav {
+        display: none;
+        position: absolute;
+        opacity: 0;
+        top: -9999px;
+        left: -9999px;
+        @include mobile {
+          &:checked {
+            ~ ul {
+              display: flex;
+            }
+
+            ~ .header_menu {
+              span {
+                &:nth-child(1) {
+                  transform: rotate(45deg) translate(2px, 5px);
+                }
+
+                &:nth-child(2) {
+                  opacity: 0;
+                }
+
+                &:nth-child(3) {
+                  transform: rotate(-45deg) translate(2px, -5px);
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .header_menu {
+        span {
+          display: block;
+          width: 20px;
+          height: 2px;
+          background: #07ACE6 0 0 no-repeat padding-box;
+          opacity: 1;
+          margin-bottom: 3px;
+          @include desktop{
+            display: none;
+          }
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+        @include tablet {
+          display: block;
+        }
+      }
+    }
+  }
+}

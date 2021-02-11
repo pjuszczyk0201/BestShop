@@ -1,0 +1,67 @@
+
+ .banner {
+   background-size: cover;
+   background-position: bottom;
+
+   .welcome {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+     margin-top: 130px;
+     @include mobile {
+       margin-top: 100px;
+     }
+
+     h1 {
+       font: normal normal normal 49px/57px Raleway;
+       letter-spacing: 0;
+       text-align: center;
+       color: #000000;
+       opacity: 1;
+     }
+
+     p {
+       text-align: center;
+       font: normal normal normal 16px/22px Open Sans;
+       letter-spacing: 0;
+       color: #000000;
+       opacity: 1;
+       margin-top: 20px;
+       margin-bottom: 30px;
+     }
+
+     button {
+       background: #08A6E4 0 0 no-repeat padding-box;
+       box-shadow: 5px 10px 14px #07ACE629;
+       border-radius: 40px;
+       opacity: 1;
+       padding: 22px 157px;
+       text-align: center;
+       font: normal normal bold 16px/22px Open Sans;
+       letter-spacing: 0;
+       color: #FFFFFF;
+       outline: none;
+       cursor: pointer;
+       border: none;
+       @include mobile {
+         padding: 22px 97px;
+       }
+     }
+       .image {
+         width: 100%;
+         height: auto;
+         background-position: center;
+         background-size: auto;
+
+         img {
+           width: 100vw;
+           @include mobile {
+             transform: translateX(-28%);
+             width: 779px;
+             height: 267px;
+           }
+         }
+       }
+     }
+   }

@@ -1,0 +1,210 @@
+
+.pricing {
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  h1 {
+    text-align: center;
+    font: normal normal normal 36px/42px Raleway;
+    letter-spacing: 0;
+    color: #000000;
+    opacity: 1;
+    margin-top: 100px;
+    @include mobile {
+      margin-top: 53px;
+    }
+  }
+
+  .boxes {
+    display: flex;
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .variant_basic,
+    .variant_professional,
+    .variant_premium {
+      background: #FFFFFF 0 0 no-repeat padding-box;
+      box-shadow: 5px 10px 27px #07ACE629;
+      border: 1px solid #07ACE6;
+      border-radius: 18px;
+      opacity: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 180px auto 75px;
+      width: 405px;
+      height: 500px;
+      @include mobile {
+        width: 330px;
+        height: 277px;
+        margin-top: 20px;
+      }
+
+
+      &:first-child {
+        border: 1px solid #FB3B64;
+        width: 372px;
+        height: 461px;
+        @include mobile {
+          width: 293px;
+          height: 251px;
+        }
+      }
+
+      &:last-child {
+        border: 1px solid #55DFB4;
+        width: 372px;
+        height: 461px;
+        @include mobile {
+          width: 293px;
+          height: 251px;
+        }
+      }
+
+      .box_professional,
+      .box_premium,
+      .box_basic {
+        @include mobile {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          margin-top: 60px;
+        }
+
+        .details {
+          display: flex;
+          flex-direction: column;
+
+
+          h2 {
+            font: normal normal bold 20px/1px Raleway;
+            letter-spacing: 0;
+            color: #13253B;
+            opacity: 1;
+            margin-top: 34px;
+            font-weight: 700;
+            text-align: center;
+            @include mobile {
+              margin-top: -40px;
+            }
+          }
+
+          p {
+            text-align: center;
+            font: normal normal bold 12px/1px Raleway;
+            letter-spacing: 0;
+            color: #13253B;
+            opacity: 1;
+            margin-top: 50px;
+            font-weight: 700;
+            @include mobile {
+              margin-top: 30px;
+            }
+          }
+        }
+
+        ul {
+          list-style: none;
+          margin-top: 40px;
+          flex-direction: column;
+          text-align: center;
+          @include mobile {
+            margin-top: -70px;
+          }
+
+          li {
+            padding: 10px;
+            font-size: 14px;
+
+            &.available::before {
+              content: url("../images/ckechmark11.svg");
+              padding: 10px;
+            }
+
+            &.not_available::before {
+              content: url("../images/close2.svg");
+              padding: 10px;
+            }
+          }
+        }
+
+        &.box_basic,
+        &.box_premium,
+        &.box_professional {
+          span {
+            font: normal normal 300 46px/2px Open Sans;
+            letter-spacing: 0;
+            opacity: 1;
+            margin-top: 72px;
+            font-weight: 300;
+            text-align: center;
+            color: #FB3B64;
+            @include mobile {
+              margin-top: 35px;
+            }
+          }
+        }
+
+        &.box_professional {
+          span {
+            color: #07ACE6;
+          }
+        }
+
+        &.box_premium {
+          span {
+            color: #55DFB4;
+          }
+        }
+      }
+      &.variant_basic,
+      &.variant_professional,
+      &.variant_premium {
+        a {
+          color: #FFFFFF;
+          text-align: center;
+          outline: none;
+          text-decoration: none;
+          font: normal normal bold 13px/41px Open Sans;
+          width: 150px;
+          height: 50px;
+          border-radius: 23px;
+          opacity: 1;
+          letter-spacing: 0;
+          position: relative;
+          bottom: -65px;
+          background: #EB476E 0 0 no-repeat padding-box;
+          @include mobile {
+            margin-top: -50px;
+          }
+        }
+      }
+          &.variant_professional {
+            a {
+              background-color: #07ACE6;
+              bottom: -60px;
+              @include mobile {
+                margin-top: -20px;
+              }
+            }
+          }
+
+          &.variant_premium {
+            a {
+              background-color: #55DFB4;
+              bottom: -40px;
+              @include mobile {
+                margin-top: -10px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+
